@@ -92,9 +92,9 @@ class Subject implements TbaiXml
             }
             $subject->appendChild($recipients);
             $subject->appendChild($document->createElement('VariosDestinatarios', $this->multipleRecipients()));
-            $subject->appendChild($document->createElement('EmitidaPorTercerosODestinatario', $this->issuedBy()));
         }
 
+        $subject->appendChild($document->createElement('EmitidaPorTercerosODestinatario', $this->issuedBy()));
 
         return $subject;
     }
